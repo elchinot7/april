@@ -52,3 +52,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Chains
+chains/
+
+#Plots
+*.eps
+*.pdf
+*.png

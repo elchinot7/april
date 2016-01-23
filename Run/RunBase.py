@@ -18,7 +18,7 @@ from DecayLCDMCosmology import *
 from StepCDMCosmology import *
 from EarlyDECosmology import *
 from SlowRDECosmology import *
-from QuintCosmology import *
+# from QuintCosmology import *
 #from wDMCosmology import *
 
 #Like modules
@@ -84,13 +84,13 @@ def ParseModel(model):
     elif model=="Spline":
         T=SplineLCDMCosmology()
     elif model=="DecayFrac":
-        T=DecayLCDMCosmology() 
+        T=DecayLCDMCosmology()
     elif model=="Decay":
-        T=DecayLCDMCosmology(varyxfrac=False,xfrac=1.0) 
+        T=DecayLCDMCosmology(varyxfrac=False,xfrac=1.0)
     elif model=="Decay01":
-        T=DecayLCDMCosmology(varyxfrac=False,xfrac=0.1) 
+        T=DecayLCDMCosmology(varyxfrac=False,xfrac=0.1)
     elif model=="Decay05":
-        T=DecayLCDMCosmology(varyxfrac=False,xfrac=0.5) 
+        T=DecayLCDMCosmology(varyxfrac=False,xfrac=0.5)
     elif model=="PolyCDM":
         T=PolyCDMCosmology()
     elif model=="fPolyCDM":
@@ -102,9 +102,9 @@ def ParseModel(model):
     elif model=="SlowRDE":
         T=SlowRDECosmology(varyOk=False)
     elif model=="Quint_last":
-	T=QuintCosmology()
+        T=QuintCosmology()
     elif model=='wDM':
-	T=wDMCosmology()
+        T=wDMCosmology()
     else:
         print "Cannot recognize model", model
         sys.exit(1)
@@ -133,7 +133,7 @@ def ParseDataset(datasets):
             DR11LOWZ(),
             DR11CMASS(),
             SixdFGS(),
-            SDSSMGS()    
+            SDSSMGS()
             ])
         elif name=='GBAOx10':
             L.addLikelihoods([
@@ -149,7 +149,7 @@ def ParseDataset(datasets):
 	elif name=='CMASS':
 	    L.addLikelihoods([
 	    DR11CMASS()
-	    ])	
+	    ])
         elif name=='LBAO':
             L.addLikelihoods([
             DR11LyaAuto(),
